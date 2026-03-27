@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Pallavi | Azure Integration Services — Interview Prep</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body class="light">
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-brand">
+      <div class="azure-logo">
+        <svg width="32" height="32" viewBox="0 0 96 96" fill="none"><path d="M33.338 8l-21.005 36.39 13.609 23.573H48.29L33.338 8z" fill="#0078D4"/><path d="M35.993 68l-13.948-8.037L8 68h28zM48.29 67.963l-8.663 14.992 47.373 5.045-38.71-20.037z" fill="#0078D4"/><path d="M56.285 8H33.338l22.947 39.726L87.908 68l-31.623-60z" fill="#50E6FF"/></svg>
+      </div>
+      <div>
+        <div class="header-title">Azure Integration Interview Prep</div>
+        <div class="header-sub">Pallavi Dronamraju · KGS Azure Integration Services Engineer</div>
+      </div>
+    </div>
+    <div class="header-actions">
+      <span class="badge badge-green">2-Day Sprint</span>
+      <span class="badge badge-blue">20 Topics</span>
+      <button class="theme-toggle" id="themeToggle" title="Toggle theme">
+        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="progress-bar-container">
+    <div class="progress-bar-track"><div class="progress-bar-fill" id="readingProgress"></div></div>
+  </div>
+</header>
+
+<!-- LAYOUT -->
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-label">YOUR STORY</div>
+      <a href="#master-story" class="nav-item nav-story">
+        <span class="nav-icon">⭐</span> Master Project Story
+      </a>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">WED — DONE ✓</div>
+      <a href="#topic1" class="nav-item done"><span class="nav-num">01</span> System Fundamentals</a>
+      <a href="#topic2" class="nav-item done"><span class="nav-num">02</span> Networking & HTTP</a>
+      <a href="#topic3" class="nav-item done"><span class="nav-num">03</span> Identity & Security</a>
+      <a href="#topic4" class="nav-item done"><span class="nav-num">04</span> Azure Core Architecture</a>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">THU — FOCUS</div>
+      <a href="#topic5" class="nav-item active"><span class="nav-num">05</span> Azure Storage</a>
+      <a href="#topic6" class="nav-item"><span class="nav-num">06</span> Messaging Concepts</a>
+      <a href="#topic7" class="nav-item"><span class="nav-num">07</span> Azure Service Bus</a>
+      <a href="#topic8" class="nav-item"><span class="nav-num">08</span> Azure Event Grid</a>
+      <a href="#topic9" class="nav-item"><span class="nav-num">09</span> Azure Event Hub</a>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">FRI — CORE</div>
+      <a href="#topic10" class="nav-item"><span class="nav-num">10</span> Logic Apps Basics</a>
+      <a href="#topic11" class="nav-item"><span class="nav-num">11</span> Logic Apps Patterns</a>
+      <a href="#topic12" class="nav-item"><span class="nav-num">12</span> Azure Functions</a>
+      <a href="#topic13" class="nav-item"><span class="nav-num">13</span> APIM</a>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">SAT — ARCHITECTURE</div>
+      <a href="#topic14" class="nav-item"><span class="nav-num">14</span> Integration Patterns</a>
+      <a href="#topic15" class="nav-item"><span class="nav-num">15</span> Azure Networking</a>
+      <a href="#topic16" class="nav-item"><span class="nav-num">16</span> Security & Governance</a>
+      <a href="#topic17" class="nav-item"><span class="nav-num">17</span> Monitoring</a>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">SUN — ADVANCED</div>
+      <a href="#topic18" class="nav-item"><span class="nav-num">18</span> DevOps & Deployment</a>
+      <a href="#topic19" class="nav-item"><span class="nav-num">19</span> Hybrid & BizTalk</a>
+      <a href="#topic20" class="nav-item"><span class="nav-num">20</span> AI Integration</a>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+
+    <!-- HERO -->
+    <section class="hero-section">
+      <div class="hero-grid">
+        <div class="hero-card hero-card-blue">
+          <div class="hero-card-icon">🎯</div>
+          <div class="hero-card-title">Goal</div>
+          <div class="hero-card-body">Sound like: <em>"I have designed and implemented Azure integration solutions end-to-end."</em></div>
+        </div>
+        <div class="hero-card hero-card-purple">
+          <div class="hero-card-icon">⚡</div>
+          <div class="hero-card-title">Your Edge</div>
+          <div class="hero-card-body">7+ years, AZ-204, BizTalk→Azure migrations, real Logic Apps + Service Bus + AI pipeline experience</div>
+        </div>
+        <div class="hero-card hero-card-green">
+          <div class="hero-card-icon">📅</div>
+          <div class="hero-card-title">2-Day Plan</div>
+          <div class="hero-card-body">Thu: Storage + Messaging · Fri: Logic Apps + Functions + APIM · Sat: Architecture + Security · Sun: DevOps + AI</div>
+        </div>
+      </div>
+      <div class="confidence-phrase">
+        <blockquote>"At EY I led a 3-year Azure Integration modernisation programme — migrating a large Insurance client from BizTalk to Azure Logic Apps Standard, Service Bus, Function Apps, and APIM — while simultaneously building Azure AI enrichment pipelines for client profiling."</blockquote>
+      </div>
+    </section>
+
+    <!-- MASTER PROJECT STORY -->
+    <section id="master-story" class="topic-section story-section">
+      <div class="section-header story-header">
+        <span class="section-badge badge-gold">⭐ YOUR STORY</span>
+        <h2>Master Project Narrative</h2>
+        <p class="section-desc">Memorise this. Tell it in your opening. Expand each paragraph as needed.</p>
+      </div>
+
+      <div class="story-paragraph">
+        <div class="story-num">1</div>
+        <div class="story-content">
+          <strong>The Migration Story</strong>
+          <p>At EY, I led the end-to-end Azure Integration Modernisation programme for a large Insurance client — a 3-year engagement where I was responsible for re-platforming their entire BizTalk Server estate onto Azure Integration Services. I architected the target-state solution using Logic Apps Standard for orchestration, Azure Function Apps for event-triggered transformations, Azure Service Bus for reliable asynchronous messaging between policy, claims, and payments services, and Azure API Management to expose and govern our integration APIs. The migration involved not just technical translation — BizTalk orchestrations became Logic App workflows, BizTalk pipelines became Function Apps — but also redesigning the integration patterns to be cloud-native, decoupled, and observable from day one.</p>
+        </div>
+      </div>
+
+      <div class="story-paragraph">
+        <div class="story-num">2</div>
+        <div class="story-content">
+          <strong>The Security & Observability Story</strong>
+          <p>Security was non-negotiable on this engagement. I applied zero-trust principles throughout: all integration components used Managed Identities for credential-free authentication — Function Apps authenticated to Service Bus, Logic Apps accessed Key Vault secrets, and APIM published directly to Service Bus queues using a managed identity policy rather than connection strings. For observability, I configured Azure Monitor and Application Insights across all workflows, enabling distributed trace correlation from APIM through Logic Apps to Service Bus and Function Apps. When a message stalled or a dead-letter queue built up, I could trace the root cause in minutes through Log Analytics KQL queries.</p>
+        </div>
+      </div>
+
+      <div class="story-paragraph">
+        <div class="story-num">3</div>
+        <div class="story-content">
+          <strong>The AI Pipeline Story</strong>
+          <p>Beyond the migration, I designed and delivered a sequential AI enrichment pipeline for client profiling — five stages: Pattern Detection using regex coverage analysis, PII Detection using Azure AI services with confidence scoring, Anomaly Detection for outlier flagging, Rule Checking against business policy, and Quality Scoring that produced a composite score stored in JSONB. I adopted spec-driven development using Claude to decompose requirements into structured specifications and GitHub Copilot to accelerate implementation — this combination reduced time from design to working code by roughly 40%. The pipeline was fault-tolerant: each stage produced structured outputs, failures triggered retries with DLQ fallback, and all decisions were auditable.</p>
+        </div>
+      </div>
+
+      <div class="story-tip">
+        <strong>Interview tip:</strong> When asked "tell me about yourself" or "walk me through a project", use Paragraph 1. When asked about security, pivot to Paragraph 2. When asked about AI or innovation, use Paragraph 3. Mix freely.
+      </div>
+    </section>
+
+    <!-- ==================== TOPIC 1 ==================== -->
+    <section id="topic1" class="topic-section">
+      <div class="section-header">
+        <span class="section-badge badge-done">✓ DONE</span>
+        <h2><span class="topic-num">01</span> Computer & System Fundamentals</h2>
+        <p class="section-desc">CPU, memory, throughput, latency, scaling — how these concepts apply to Azure integration design.</p>
+      </div>
+
+      <div class="content-grid">
+        <div class="content-card">
+          <h3>Core Concepts</h3>
+          <div class="concept-block">
+            <h4>Throughput vs Latency</h4>
+            <p><strong>Throughput</strong> = how many operations per second the system can handle. <strong>Latency</strong> = how long a single operation takes. These trade off: batching increases throughput but raises latency. In Azure Service Bus, throughput is measured in messages/sec; latency is the round-trip time for a single send+receive.</p>
+            <p>For integration design: a document exchange system might prioritise throughput (bulk file processing via Event Hub), while a payment approval flow prioritises low latency (synchronous APIM → Function App → DB).</p>
+          </div>
+          <div class="concept-block">
+            <h4>Horizontal vs Vertical Scaling</h4>
+            <p><strong>Vertical scaling</strong> = bigger machine (more CPU/RAM). Limited, requires downtime. <strong>Horizontal scaling</strong> = more instances. Azure's default model — Functions scale out automatically, Service Bus Premium scales via messaging units, Event Hub scales via throughput units.</p>
+            <p>In integration: Logic Apps Standard uses horizontal scaling on Azure App Service Plans. Functions on Consumption plan scale to zero and out to hundreds of instances automatically based on queue depth.</p>
+          </div>
+          <div class="concept-block">
+            <h4>Stateless vs Stateful</h4>
+            <p><strong>Stateless</strong>: each request is independent, no server-side session. Easy to scale horizontally. HTTP endpoints, most APIs. <strong>Stateful</strong>: maintains state across calls. Logic Apps Standard stateful workflows persist to Azure Storage. Durable Functions persist orchestration state to Azure Table Storage. Service Bus sessions provide ordered, stateful message processing.</p>
+          </div>
+          <div class="concept-block">
+            <h4>CAP Theorem in Azure Context</h4>
+            <p>A distributed system can guarantee at most 2 of 3: <strong>Consistency</strong> (all nodes see same data), <strong>Availability</strong> (every request gets a response), <strong>Partition tolerance</strong> (system works despite network splits). Azure Storage is typically AP (highly available, eventually consistent). Service Bus is CP — it prioritises consistency of message ordering over availability during partitions. APIM with geo-redundancy trades some consistency for availability.</p>
+          </div>
+        </div>
+
+        <div class="content-card">
+          <h3>Key Terms</h3>
+          <div class="terms-grid">
+            <div class="term"><span class="term-name">Throughput</span><span class="term-def">Operations or messages processed per unit time</span></div>
+            <div class="term"><span class="term-name">Latency</span><span class="term-def">Time from request initiation to response received</span></div>
+            <div class="term"><span class="term-name">Horizontal scaling</span><span class="term-def">Adding more instances (scale out)</span></div>
+            <div class="term"><span class="term-name">Vertical scaling</span><span class="term-def">Increasing resources on existing instance (scale up)</span></div>
+            <div class="term"><span class="term-name">Stateless</span><span class="term-def">No server-side session state between requests</span></div>
+            <div class="term"><span class="term-name">Stateful</span><span class="term-def">Maintains state across interactions (persisted externally)</span></div>
+            <div class="term"><span class="term-name">CAP theorem</span><span class="term-def">Consistency, Availability, Partition tolerance — pick 2</span></div>
+            <div class="term"><span class="term-name">Idempotency</span><span class="term-def">Same operation produces same result regardless of how many times applied</span></div>
+            <div class="term"><span class="term-name">IOPS</span><span class="term-def">Input/Output Operations Per Second — disk performance metric</span></div>
+            <div class="term"><span class="term-name">SLA</span><span class="term-def">Service Level Agreement — uptime/availability guarantee</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="qa-section">
+        <h3>Interview Q&amp;A</h3>
+        <div class="qa-list" id="qa-topic1">
+          <div class="qa-item">
+            <div class="qa-question" onclick="toggleQA(this)">
+              <span>How would you design an Azure integration solution for high throughput message processing?</span>
+              <span class="qa-chevron">▼</span>
+            </div>
+            <div class="qa-answer">
+              <p>For high throughput I'd reach for Azure Event Hub as the ingestion layer — it's designed for millions of events per second with partitioned parallel processing. I'd pair it with Azure Stream Analytics or Azure Functions (Event Hub trigger) as the processor, scaling out across all partitions via consumer groups. If the downstream needs reliable delivery semantics (at-least-once, dead-lettering), I'd fan out from Event Hub into Service Bus topics for further routing. On the Service Bus side I'd use Premium tier for predictable performance, size the messaging units based on expected TPS, and use batched send operations from the producers to maximize throughput. I'd monitor using Service Bus metrics in Azure Monitor — specifically the incoming message rate and server-side latency — to tune accordingly.</p>
+            </div>
+          </div>
+          <div class="qa-item">
+            <div class="qa-question" onclick="toggleQA(this)">
+              <span>Explain the difference between latency and throughput with a real Azure example.</span>
+              <span class="qa-chevron">▼</span>
+            </div>
+            <div class="qa-answer">
+              <p>Latency is how long one operation takes; throughput is how many operations you can do per second — they often trade off. A practical Azure example: when I configured APIM to publish messages directly to Service Bus using the managed identity send-request policy, I measured end-to-end latency of a single publish at around 50-80ms including APIM policy execution. But throughput — the system could handle several thousand such requests per minute on Standard tier. If I needed to push throughput higher I'd batch messages in APIM policies and send to Service Bus in bulk, which increases per-message latency slightly but multiplies overall throughput. For time-sensitive flows like fraud checks I optimise for latency; for bulk data ingestion I optimise for throughput and accept higher per-message delay.</p>
+            </div>
+          </div>
+          <div class="qa-item">
+            <div class="qa-question" onclick="toggleQA(this)">
+              <span>How does Azure Functions handle scaling and what are its limits?</span>
+              <span class="qa-chevron">▼</span>
+            </div>
+            <div class="qa-answer">
+              <p>Azure Functions on the Consumption plan scales dynamically: the host monitors the trigger source (queue depth, event rate) and adds instances as load increases, up to 200 instances by default. Each instance is stateless, processes messages independently. The scale controller checks queue length every few seconds and scales aggressively when needed. The limitation is cold start — on Consumption, an idle instance is deallocated, so the first request after idle periods incurs a cold start (200-500ms for .NET, longer for some runtimes). For integration scenarios where cold start is unacceptable I use Premium plan which keeps warm instances ready. For Service Bus triggered Functions, the scale is driven by the number of messages in the queue — the runtime will scale up to one instance per message up to the concurrency limit. I've used this extensively on the Insurance project where Function Apps processed claims documents triggered by Service Bus queue messages.</p>
+            </div>
+          </div>
+          <div class="qa-item">
+            <div class="qa-question" onclick="toggleQA(this)">
+              <span>What is idempotency and why is it critical in messaging systems?</span>
+              <span class="qa-chevron">▼</span>
+            </div>
+            <div class="qa-answer">
+              <p>Idempotency means applying the same operation multiple times produces the same result as applying it once. In messaging systems this is critical because at-least-once delivery is the norm — the broker guarantees delivery but may deliver duplicates (during network failures, retries, or consumer restarts). If your message processor is not idempotent, a duplicate message causes a duplicate database insert, duplicate API call, or duplicate payment — all catastrophic. To implement idempotency: include a unique message ID in every message (Service Bus exposes MessageId), on the consumer side check if that ID has already been processed (typically via a database deduplication table or cache), and skip reprocessing if already seen. Service Bus also has built-in duplicate detection at the namespace level: enable it on a queue/topic with a detection window (1-10 minutes), and it will reject messages with duplicate MessageIds. On the Insurance project I implemented idempotent claim processors using message correlation IDs stored in SQL — this protected us against the at-least-once redelivery behaviour during the migration.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TOPIC 2 ==================== -->
+    <section id="topic2" class="topic-section">
+      <div class="section-header">
+        <span class="section-badge badge-done">✓ DONE</span>
+        <h2><span class="topic-num">02</span> Networking & Web Protocols</h2>
+        <p class="section-desc">HTTP, REST, SOAP, Webhooks — how APIs communicate and why it matters for integration.</p>
+      </div>
+
+      <div class="content-grid">
+        <div class="content-card">
+          <h3>Core Concepts</h3>
+          <div class="concept-block">
+            <h4>HTTP/HTTPS & TLS</h4>
+            <p>HTTP is stateless request-response protocol. HTTPS adds TLS encryption: client sends ClientHello with supported cipher suites, server responds with certificate, keys are exchanged (ECDH), symmetric session key is derived, all traffic encrypted. In Azure, TLS 1.2+ is enforced across APIM, Function Apps, Logic Apps HTTP triggers. APIM can terminate TLS and re-encrypt to backend (SSL offloading) or pass through.</p>
+          </div>
+          <div class="concept-block">
+            <h4>REST vs SOAP</h4>
+            <p><strong>REST</strong>: architectural style using HTTP verbs (GET/POST/PUT/DELETE/PATCH), resources identified by URIs, JSON payloads, stateless. <strong>SOAP</strong>: protocol with XML envelope/body/header, WSDL contract, transport-agnostic (but usually HTTP). SOAP has built-in standards for security (WS-Security), reliability (WS-ReliableMessaging), transactions. In BizTalk we consumed SOAP/WCF services extensively. In the Azure migration, I exposed REST APIs via APIM, translating SOAP backends to REST for modern consumers — APIM has built-in SOAP pass-through and SOAP-to-REST transformation via policies.</p>
+          </div>
+          <div class="concept-block">
+            <h4>Webhooks</h4>
+            <p>A webhook is an HTTP callback — the provider calls your endpoint when an event occurs (push model vs REST polling pull model). Logic Apps HTTP trigger is essentially a webhook endpoint. Event Grid delivers events to webhook endpoints. Benefits: real-time, no polling overhead. Challenge: your endpoint must be publicly reachable, must respond within timeout (30s for Event Grid), must handle retries. I used webhook-triggered Logic Apps in the Insurance project to receive policy status updates from a third-party system.</p>
+          </div>
+        </div>
+
+        <div class="content-card">
+          <h3>HTTP Status Codes for Integration</h3>
+          <div class="status-grid">
+            <div class="status-item status-2xx"><span>200 OK</span><span>Request succeeded, body has result</span></div>
+            <div class="status-item status-2xx"><span>201 Created</span><span>Resource created (POST response)</span></div>
+            <div class="status-item status-2xx"><span>202 Accepted</span><span>Async: accepted for processing, not done yet</span></div>
+            <div class="status-item status-2xx"><span>204 No Content</span><span>Success, no body (DELETE, PUT)</span></div>
+            <div class="status-item status-4xx"><span>400 Bad Request</span><span>Client error — invalid request body</span></div>
+            <div class="status-item status-4xx"><span>401 Unauthorized</span><span>Not authenticated</span></div>
+            <div class="status-item status-4xx"><span>403 Forbidden</span><span>Authenticated but no permission</span></div>
+            <div class="status-item status-4xx"><span>404 Not Found</span><span>Resource doesn't exist</span></div>
+            <div class="status-item status-4xx"><span>429 Too Many Requests</span><span>Rate limit hit (APIM throttling)</span></div>
+            <div class="status-item status-5xx"><span>500 Internal Server Error</span><span>Server-side failure</span></div>
+            <div class="status-item status-5xx"><span>503 Service Unavailable</span><span>Service down or overloaded</span></div>
+            <div class="status-item status-5xx"><span>504 Gateway Timeout</span><span>APIM/gateway upstream timeout</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="qa-section">
+        <h3>Interview Q&amp;A</h3>
+        <div class="qa-list">
+          <div class="qa-item">
+            <div class="qa-question" onclick="toggleQA(this)"><span>How does APIM handle the difference between REST and SOAP backends?</span><span class="qa-chevron">▼</span></div>
+            <div class="qa-answer"><p>APIM can import WSDL directly and expose the SOAP service as-is (SOAP pass-through) or transform it to a REST interface. In the REST-to-SOAP mode, APIM accepts JSON from clients, and the inbound policy transforms it to a SOAP XML envelope using set-body with liquid templates before forwarding to the backend. The response is then transformed back. On our Insurance project we had legacy SOAP policy management services — I configured APIM REST facades over them so our Logic Apps could call JSON REST endpoints while APIM handled the SOAP translation transparently. This meant no changes to the legacy backend and modern REST interfaces for all new integration consumers.</p></div>
+          </div>
+          <div class="qa-item">
+            <div class="qa-question" onclick="toggleQA(this)"><span>What is the difference between synchronous and asynchronous APIs? When would you use 202 Accepted?</span><span class="qa-chevron">▼</span></div>
+            <div class="qa-answer"><p>Synchronous: client waits for the response before continuing — request-response, blocking. Good for quick lookups, validations. Asynchronous: client fires request and gets back immediately, processes result later via polling or callback. The 202 Accepted status code signals an async pattern: the server accepted the request for processing but hasn't completed it yet. Typically paired with a Location header pointing to a status endpoint the client can poll. In Azure, APIM has built-in support for the async operation pattern. I've used this pattern for claims ingestion on the Insurance project — the API call accepted the claim payload and returned 202 with a correlation ID, then the actual processing happened asynchronously via Service Bus and a Function App, and the client could poll a status endpoint. This decoupled the client from the processing latency and made the system far more resilient.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TOPIC 3 ==================== -->
+    <section id="topic3" class="topic-section">
+      <div class="section-header">
+        <span class="section-badge badge-done">✓ DONE</span>
+        <h2><span class="topic-num">03</span> Identity & Security</h2>
+        <p class="section-desc">OAuth 2.0, JWT, Azure Entra ID, Managed Identity, RBAC, Key Vault — the security backbone of Azure integration.</p>
+      </div>
+
+      <div class="content-grid">
+        <div class="content-card">
+          <h3>OAuth 2.0 Flows</h3>
+          <div class="concept-block">
+            <h4>Client Credentials Flow (most common in integration)</h4>
+            <pre class="code-block">App → POST /token
+  grant_type=client_credentials
+  client_id=xxx
+  client_secret=xxx
+  scope=https://servicebus.azure.net/.default
+
+← { access_token: "eyJ...", expires_in: 3599 }</pre>
+            <p>Used for service-to-service (no user). App authenticates with its own identity. This is what Managed Identity replaces — instead of client_id + secret, Azure handles token acquisition internally.</p>
+          </div>
+          <div class="concept-block">
+            <h4>Managed Identity — How it works</h4>
+            <pre class="code-block">Logic App / Function App
+  → Azure Instance Metadata Service
+    GET http://169.254.169.254/metadata/identity/oauth2/token
+      ?resource=https://servicebus.azure.net
+  ← { access_token: "eyJ..." }  (Azure-managed, auto-renewed)
+  → Call Service Bus with Bearer token</pre>
+            <p><strong>System-assigned</strong>: tied to the resource lifecycle, auto-deleted when resource is deleted. <strong>User-assigned</strong>: standalone identity, can be shared across resources, survives resource deletion. I used system-assigned MI for all EY Insurance integration components — Function Apps, Logic Apps, and APIM — so no credentials in config files or Key Vault.</p>
+          </div>
+        </div>
+
+        <div class="content-card">
+          <h3>JWT Structure</h3>
+          <div class="jwt-diagram">
+            <div class="jwt-part jwt-header">
+              <strong>Header</strong>
+              <code>{ "alg": "RS256", "typ": "JWT", "kid": "key-id" }</code>
+            </div>
+            <div class="jwt-dot">.</div>
+            <div class="jwt-part jwt-payload">
+              <strong>Payload (Claims)</strong>
+              <code>{ "iss": "https://login.microsoftonline.com/{tenant}",<br/>  "aud": "https://servicebus.azure.net",<br/>  "sub": "object-id",<br/>  "exp": 1711567200,<br/>  "roles": ["ServiceBusDataSender"] }</code>
+            </div>
+            <div class="jwt-dot">.</div>
+            <div class="jwt-part jwt-sig">
+              <strong>Signature</strong>
+              <code>RSASHA256(base64(header) + "." + base64(payload), privateKey)</code>
+            </div>
+          </div>
+          <div class="concept-block" style="margin-top:16px">
+            <h4>APIM validate-jwt policy</h4>
+            <pre class="code-block">&lt;validate-jwt header-name="Authorization" failed-validation-httpcode="401"&gt;
+  &lt;openid-config url="https://login.microsoftonline.com/{tid}/v2.0/.well-known/openid-configuration"/&gt;
+  &lt;audiences&gt;&lt;audience&gt;api://my-api-app-id&lt;/audience&gt;&lt;/audiences&gt;
+  &lt;required-claims&gt;
+    &lt;claim name="roles" match="any"&gt;
+      &lt;value&gt;Integration.Read&lt;/value&gt;
+    &lt;/claim&gt;
+  &lt;/required-claims&gt;
+&lt;/validate-jwt&gt;</pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="comparison-table-wrapper">
+        <h3>Key Vault: Access Policies vs RBAC</h3>
+        <table class="comparison-table">
+          <thead><tr><th>Aspect</th><th>Access Policies (legacy)</th><th>RBAC (recommended)</th></tr></thead>
+          <tbody>
+            <tr><td>Granularity</td><td>Per-vault permissions</td><td>Per-object (secret/key/cert) permissions</td></tr>
+            <tr><td>Management</td><td>KV-specific, separate from ARM RBAC</td><td>Unified with Azure RBAC</td></tr>
+            <tr><td>Audit</td><td>KV activity logs</td><td>Azure Activity Log + KV logs</td></tr>
+            <tr><td>Best for</td><td>Legacy/existing setups</td><td>New deployments, fine-grained control</td></tr>
+            <tr><td>Roles</td><td>get/set/list/delete permissions</td><td>Key Vault Secrets User, Secrets Officer, etc.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="qa-section">
+        <h3>Interview Q&amp;A</h3>
+        <div class="qa-list">
+          <div class="qa-item">
+            <div class="qa-question" onclick="toggleQA(this)"><span>How did you implement secure credential management across your integration solution?</span><span class="qa-chevron">▼</span></div>
+            <div class="qa-answer"><p>I implemented zero-trust credential management across all EY Insurance integration components. The principle was: no secrets in code, config files, or environment variables. For service-to-service calls within Azure — Logic Apps to Service Bus, Functions to Storage, APIM to Service Bus — I used Managed Identities with RBAC role assignments. For example, the Function App's system-assigned identity was granted the "Azure Service Bus Data Sender" role on the Service Bus namespace. For third-party credentials (SFTP passwords, external API keys) that had to exist somewhere, I stored them in Azure Key Vault and referenced them via Key Vault references in App Settings — Azure resolves the reference at runtime using the app's managed identity. This meant even application settings were secret-free in the portal. APIM used Named Values backed by Key Vault references for API subscription keys and backend credentials. The result was a fully auditable, rotation-friendly credential setup with no hardcoded secrets anywhere in the stack.</p></div>
+          </div>
+          <div class="qa-item">
+            <div class="qa-question" onclick="toggleQA(this)"><span>Explain the difference between Authentication and Authorization. How does RBAC enforce authorization in Azure?</span><span class="qa-chevron">▼</span></div>
+            <div class="qa-answer"><p>Authentication (AuthN) answers "who are you?" — verifying identity via credentials, tokens, certificates. Authorization (AuthZ) answers "what are you allowed to do?" — checking permissions after identity is established. Azure RBAC is the authorization system. It has three components: Security Principal (user, group, service principal, or managed identity), Role Definition (collection of permissions like read/write/delete on specific resource types), and Scope (management group, subscription, resource group, or resource). When an action is requested, Azure RBAC checks: does this principal have a role assignment at this scope (or parent scope) that includes this action? For integration: I assign "Azure Service Bus Data Sender" to a Function App's managed identity at the namespace scope — this allows it to send to any queue/topic in that namespace. If I needed to restrict it to a specific queue, I'd scope the role to that queue resource. RBAC denies by default — explicit assignments are required.</p></div>
+          </div>
+          <div class="qa-item">
+            <div class="qa-question" onclick="toggleQA(this)"><span>When would you use a user-assigned managed identity vs system-assigned?</span><span class="qa-chevron">▼</span></div>
+            <div class="qa-answer"><p>System-assigned is simpler — it's created with the resource and auto-deleted when the resource is deleted. Good for single-purpose, isolated resources. User-assigned is a standalone identity that you create independently and can assign to multiple resources. I use user-assigned when: (1) multiple resources need the same identity and permissions — e.g., a fleet of Function Apps that all send to the same Service Bus, I create one user-assigned MI, assign it to all Functions, and manage RBAC in one place; (2) during blue-green deployments where a new resource needs the same identity as the old one before cutover; (3) when the identity needs to outlive any specific resource. On the Insurance project I used system-assigned for simplicity since each integration component had distinct responsibilities. If I were redesigning it today I'd use user-assigned for the set of components that share Service Bus access, for easier RBAC management.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TOPIC 4 ==================== -->
+    <section id="topic4" class="topic-section">
+      <div class="section-header">
+        <span class="section-badge badge-done">✓ DONE</span>
+        <h2><span class="topic-num">04</span> Azure Core Architecture</h2>
+        <p class="section-desc">Tenant, Subscription, Resource Groups, Regions, HA, DR, ARM — the scaffolding everything runs on.</p>
+      </div>
+
+      <div class="arch-diagram">
+        <div class="arch-level arch-l1"><span>Azure Active Directory Tenant</span><small>Identity boundary — your org's Entra ID</small></div>
+        <div class="arch-arrow">▼</div>
+        <div class="arch-level arch-l2"><span>Management Groups</span><small>Governance hierarchy for subscriptions</small></div>
+        <div class="arch-arrow">▼</div>
+        <div class="arch-level arch-l3"><span>Subscriptions</span><small>Billing unit + trust boundary for resources</small></div>
+        <div class="arch-arrow">▼</div>
+        <div class="arch-level arch-l4"><span>Resource Groups</span><small>Logical container, shared lifecycle, same region recommended</small></div>
+        <div class="arch-arrow">▼</div>
+        <div class="arch-level arch-l5"><span>Resources</span><small>APIM · Service Bus · Function Apps · Logic Apps · Storage</small></div>
+      </div>
+
+      <div class="content-grid">
+        <div class="content-card">
+          <h3>HA vs DR</h3>
+          <div class="concept-block">
+            <h4>High Availability (HA)</h4>
+            <p>Keeps the system running during partial failures within a region. Azure Availability Zones are physically separate datacenters in a region (power, cooling, networking independent). Service Bus Premium, APIM Premium support zone-redundant deployment — spread across 3 AZs automatically. Logic Apps Standard on zone-redundant App Service Plans. Target: 99.99% SLA.</p>
+          </div>
+          <div class="concept-block">
+            <h4>Disaster Recovery (DR)</h4>
+            <p>Recovery from full regional outage. Active-Passive: primary region runs, secondary is warm standby. Failover triggered manually or via Traffic Manager. Service Bus Geo-Disaster Recovery replicates namespace metadata (not messages) to secondary — switch alias in minutes. APIM Premium multi-region deploys gateway in multiple regions with Azure Traffic Manager routing. RTO and RPO are the key metrics: RTO (Recovery Time Objective) = how quickly can you recover; RPO (Recovery Point Objective) = how much data can you lose.</p>
+          </div>
+        </div>
+        <div class="content-card">
+          <h3>ARM & Resource Manager</h3>
+          <div class="concept-block">
+            <p>Azure Resource Manager is the management layer for all Azure resources. All operations (portal, CLI, SDK, Terraform) go through ARM. ARM enforces RBAC, provides deployment templates (ARM JSON / Bicep), and manages resource lifecycle. For integration deployments I use Bicep — it compiles to ARM JSON but is much more readable. A typical integration deployment Bicep would provision: Resource Group → Service Bus namespace + queues/topics → Storage Account → Function App → App Service Plan → APIM → Key Vault → all RBAC role assignments.</p>
+          </div>
+          <div class="concept-block">
+            <h4>Tags for governance</h4>
+            <p>Tags are key-value metadata on resources. Critical for: cost allocation (tag by project/team/env), automation (identify resources for automated ops), compliance (tag data classification). In EY deployments I tagged all resources with environment, project, cost-centre, and data-classification tags enforced via Azure Policy.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="qa-section">
+        <h3>Interview Q&amp;A</h3>
+        <div class="qa-list">
+          <div class="qa-item">
+            <div class="qa-question" onclick="toggleQA(this)"><span>How would you design an HA/DR strategy for an Azure Integration solution?</span><span class="qa-chevron">▼</span></div>
+            <div class="qa-answer"><p>I approach this in two layers: HA for in-region resilience, DR for cross-region recovery. For HA: deploy Service Bus Premium with zone redundancy across all 3 AZs in the region, deploy APIM Premium with zone redundancy, deploy Function Apps on Premium plan with zone-redundant App Service Environment, and use zone-redundant Storage for Logic Apps Standard state. This gives 99.99% SLA for normal single-region operations. For DR: I configure Service Bus Geo-Disaster Recovery pairing to a secondary region — the alias is the connection string, so failover just requires triggering the alias switch, no application config changes. APIM Premium gets a secondary region gateway added via multi-region deployment; Traffic Manager or Front Door routes to the healthy region. For Logic Apps, I maintain the same workflow definition deployed in both regions (IaC handles this), with the secondary in standby mode. The RPO for Service Bus Geo-DR is near-zero for namespace config but potentially minutes for in-flight messages — for zero-RPO message requirements I'd use Service Bus Premium with Active-Active in both regions and application-level duplicate detection to handle both regions receiving the same messages.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TOPICS 5-20: Dynamic Sections (filled by JS) ==================== -->
+    <div id="dynamic-topics"></div>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p>Built for Pallavi Dronamraju · KGS Azure Integration Services Engineer Interview · 2 Days to Confidence</p>
+        <p class="footer-mantra">"I have designed and implemented Azure integration solutions end-to-end. Let me tell you about it."</p>
+      </div>
+    </footer>
+
+  </main>
+</div>
+
+<script src="topics.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
